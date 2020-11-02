@@ -9,6 +9,22 @@ int main()
 	printf("%i\n", number1);
 	number1++;
 	printf("%i\n", number1);
+	number1++;
+	printf("%i\n", number1);
+	number1++;
+	printf("%i\n", number1);
+	number1++;
+	printf("%i\n", number1);
+	number1++;
+	printf("%i\n", number1);
+	number1++;
+	printf("%i\n", number1);
+	number1++;
+	printf("%i\n", number1);
+	number1++;
+	printf("%i\n", number1);
+	number1++;
+	printf("%i\n", number1);
 
 	return 0;
 }
