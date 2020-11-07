@@ -1,0 +1,1 @@
+﻿1>------ Build started: Project: CPP Project, Configuration: Debug Win32 ------
