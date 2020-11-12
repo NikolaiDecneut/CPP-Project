@@ -31,6 +31,8 @@ int main()
 		//int
 	c = i / b;
 	printf("a / b = % d\n", c);
+	c = i % b;
+	printf("a %% b = % d\n", c);
 	z = x / y;
 	printf("x / y = % f\n", z);
 	c = x / y;
@@ -45,14 +47,14 @@ int main()
 	z = x / y;
 	printf("x / y = %f\n\n", z);
 	//mixed divide int by float into int (typecast)
-	c = i / y;
+	c = i / (int)y;
 	printf("i / y = %d\n\n", c);
 	// do modulus division of the same problem as above
+	c = i %(int) y;
+	printf("i %% y = %d\n\n", c);
 
-
-	printf("i / y = %d\n\n", c);
 	//mixed, divide float by an int into float (typecast)
-	z = t / b;
+	z = t / (float)b;
 	printf("t / b = %f\n\n", z);
 
 	//2 addition problems
