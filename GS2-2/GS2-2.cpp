@@ -52,9 +52,11 @@ int main()
 
 	printf("i / y = %d\n\n", c);
 	//mixed, divide float by an int into float (typecast)
-	z = t / b
+	z = t / b;
+	printf("t / b = %f\n\n", z);
 
 	//2 addition problems
+
 	printf("Addition problems. \n");
 	c = i + b;
 	printf("i + b = %d \n", c);
