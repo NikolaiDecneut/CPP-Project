@@ -5,6 +5,9 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    int a;
+    printf("input an integer: ");
+    scanf_s("%i", &a);
+   // fseek(stdin, 0, seek_end);
 }
 
