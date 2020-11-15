@@ -41,7 +41,7 @@ int main()
 
 	printf("i / y = %d\n\n", c);
 	//mixed, divide float by an int into float (typecast)
-	z = t / b
+	z = t / b;
 
 // 2 addition problems
 	printf("Addition problems. \n");
