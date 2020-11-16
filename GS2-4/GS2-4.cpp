@@ -17,10 +17,13 @@ Date:        Done:
 11/15/20        scanf_s code
 */
 
+
+#include <stdio.h>
 #include <iostream>
 #include <conio.h>
 #include <time.h>
 #include <stdlib.h>
+#include <string>
 int main()
 {
     float float1 = 0.0;
@@ -53,10 +56,32 @@ int main()
     printf("input a maximum for a character variable\n");
     scanf_s("%c",&d);
     fseek(stdin, 0, SEEK_END);
+    srand((unsigned)time(NULL));
+    int rn;
+    float rf;
+    char rc;
+    rn = a + rand() % (amax - a + 1); _getch;
+    printf("output for int :");
+    printf("%d\n\n", rn);
+    
+    rf = b + (float)rand() / (float)RAND_MAX;
+    printf("output for float :");
+    printf("%f\n\n", rf);
+    
+    rc = c + rand() % (d - c + 1);
+    printf("output for character");
+    printf("%c\n\n", rc);
+
+
 
 
      // i dont understand how to complete the assignment
-
+    
+    //srand((unsigned)time(NULL));
+    //int die1 = 1;
+    //int die1max = 7;
+    //int rn;
+    //rn = die1 + rand() % (die1max - die1);
 
     printf("Press any key to continue.\n");
     return 0;

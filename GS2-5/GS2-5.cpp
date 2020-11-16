@@ -60,7 +60,7 @@ int main()
 
 	printf("You will need to charter %d vans for the extra people.\n\n", vansNeeded);
 	printf("Press the any key to continue.\n");
-	_getch();
+	
 
 	return 0;
 }

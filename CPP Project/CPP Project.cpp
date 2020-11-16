@@ -1,12 +1,74 @@
 // CPP Project.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
+#include <stdio.h>
 #include <iostream>
 #include <conio.h>
-#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
+#include <string>
 int main()
 
 {
+	float float1 = 0.0;
+	float float1max = 1.0;
+	float rf;
+	rf = (float)rand() / (float)RAND_MAX;
+	printf("the following is a random number from 0.0 to 1.0\n");
+	printf("%f\n", rf);
+	int a;
+	printf("input a minimum value for a random int: \n");
+	scanf_s("%i", &a);
+	fseek(stdin, 0, SEEK_END);
+	int amax;
+	printf("input a  maximum value for a random int: \n");
+	scanf_s("%i", &amax);
+	fseek(stdin, 0, SEEK_END);
+	float b;
+	printf("input a minimum for a float variable\n");
+	scanf_s("%f", &b);
+	fseek(stdin, 0, SEEK_END);
+	float e;
+	printf("input a maximum for a float variable\n");
+	scanf_s("%f", &e);
+	fseek(stdin, 0, SEEK_END);
+	char c;
+	printf("input a minimum for a character variable\n");
+	scanf_s("%c", &c);
+	fseek(stdin, 0, SEEK_END);
+	char d;
+	printf("input a maximum for a character variable\n");
+	scanf_s("%c", &d);
+	fseek(stdin, 0, SEEK_END);
+	srand((unsigned)time(NULL));
+	int rn;
+	char rc;
+	rn = a + rand() % (amax - a + 1); _getch;
+	printf("output for int :\n");
+	printf("%d\n\n", rn);
+
+	rf = b + (float)rand() / (float)RAND_MAX;
+	printf("output for float :\n");
+	printf("%f\n\n", rf);
+
+	rc = c + rand() % (d - c + 1);
+	printf("output for character :\n");
+	printf("%c\n\n", rc);
+
+
+
+
+	// i dont understand how to complete the assignment
+
+   //srand((unsigned)time(NULL));
+   //int die1 = 1;
+   //int die1max = 7;
+   //int rn;
+   //rn = die1 + rand() % (die1max - die1);
+
+	printf("Press any key to continue.\n");
+	return 0;
+
 /*	printf("Division problems.\n");
 	int i = 5;
 	int b = 2;
