@@ -47,7 +47,7 @@ int main()
 	fseek(stdin, 0, SEEK_END);
 
 	int busses;
-	const int busCapacity = 60;	// van holds seven people (driver is hired)
+	const int busCapacity = 60;
 	busses = people / busCapacity;
 	int peopleinVans;
 	peopleinVans = people % busCapacity;
