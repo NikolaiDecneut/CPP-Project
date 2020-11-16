@@ -7,7 +7,7 @@
 int main()
 
 {
-	printf("Division problems.\n");
+/*	printf("Division problems.\n");
 	int i = 5;
 	int b = 2;
 	int r = 8;
@@ -70,6 +70,31 @@ int main()
 	//float newAnswer = 125.0 / 100.0;
 	//printf("float division answer is %f\n", newAnswer);
 	//int modAnswer = 125 % 100;
-	//printf("modulus is %d\n", modAnswer);
+	//printf("modulus is %d\n", modAnswer); */
+
+
+
+
+
+
+
+/*
+Name: Nikolai Decneut
+Problem: Write a program that lets the user choose the limits of random numbers and characters. First, find a random float between 0.0 and 1.0 (exclusive of 1.0).
+Then, have the user choose upper and lower values for a random int, a random float, and a random character.
+You decide whether the maximum values will be included or excluded in the range.
+Label the output and output each random item on a separate line.
+Pseudocode:
+find a float between 0.0 and 1.0
+get the user to input a minimum and maximum int variables
+get the user to input a minimum and maximum float variables
+get the user to input a minimum and maximum character variables
+label the output
+output each item on a seperate line
+Notes:  i dont understand how to do the last part
+Maintenance Log :
+Date:        Done:
+11/15/20        scanf_s code
+*/
 }
 
