@@ -28,24 +28,24 @@ use miles travled and fuel used to find MPG
 
 int main()
 {
-	std::string s;
+	std::string n;
 
 	printf("Tell me your name? (may not have spaces): ");
-	std::cin >> s;
+	std::cin >> n;
 	fseek(stdin, 0, SEEK_END);
 	// the code above is for the users name.
 	printf("Hello %s this app will calculate your average speed in MPH and estimate how many gallons of fuel were used by your car\n", s.c_str());
 	printf("To be able to calculate your speed i will need to know far you traveled in miles, how long you traveled in hours, \nand the gallons of fuel that were used.\n\n");
-	printf("%s please input how far you traveled in miles : ", s.c_str());
+	printf("%s please input how far you traveled in miles : ", n.c_str());
 	float miles;
 	scanf_s("%.1f", &miles);
 	fseek(stdin, 0, SEEK_END);
 	float hours;
-	printf("\n\n%s now please tell how long you traveled for in hours : ", s.c_str());
+	printf("\n\n%s now please tell how long you traveled for in hours : ", n.c_str());
 	scanf_s("%.1f", &hours);
 	fseek(stdin, 0, SEEK_END);
 	float gall;
-	printf("\n\nFinal one %s, tell me how many gallons of fuel your car used on your trip : ", s.c_str());
+	printf("\n\nFinal one %s, tell me how many gallons of fuel your car used on your trip : ", .c_str());
 	scanf_s("%.1f", &gall);
 	fseek(stdin, 0, SEEK_END);
 
