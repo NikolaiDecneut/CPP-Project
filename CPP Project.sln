@@ -23,6 +23,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GS3-1", "GS3-1\GS3-1.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RPG", "RPG\RPG.vcxproj", "{6B6C7346-153A-48D1-B89B-7EF78105BDF9}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GS3-2", "GS3-2\GS3-2.vcxproj", "{D6AE58D4-7F28-44FC-998C-8529A412C3E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -111,6 +113,14 @@ Global
 		{6B6C7346-153A-48D1-B89B-7EF78105BDF9}.Release|x64.Build.0 = Release|x64
 		{6B6C7346-153A-48D1-B89B-7EF78105BDF9}.Release|x86.ActiveCfg = Release|Win32
 		{6B6C7346-153A-48D1-B89B-7EF78105BDF9}.Release|x86.Build.0 = Release|Win32
+		{D6AE58D4-7F28-44FC-998C-8529A412C3E1}.Debug|x64.ActiveCfg = Debug|x64
+		{D6AE58D4-7F28-44FC-998C-8529A412C3E1}.Debug|x64.Build.0 = Debug|x64
+		{D6AE58D4-7F28-44FC-998C-8529A412C3E1}.Debug|x86.ActiveCfg = Debug|Win32
+		{D6AE58D4-7F28-44FC-998C-8529A412C3E1}.Debug|x86.Build.0 = Debug|Win32
+		{D6AE58D4-7F28-44FC-998C-8529A412C3E1}.Release|x64.ActiveCfg = Release|x64
+		{D6AE58D4-7F28-44FC-998C-8529A412C3E1}.Release|x64.Build.0 = Release|x64
+		{D6AE58D4-7F28-44FC-998C-8529A412C3E1}.Release|x86.ActiveCfg = Release|Win32
+		{D6AE58D4-7F28-44FC-998C-8529A412C3E1}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
