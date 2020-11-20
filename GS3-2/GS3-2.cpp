@@ -30,17 +30,17 @@ int main()
 	if (choice == 2)
 	{
 		printf("wrong");
-		que1 = 0;
+		que1 = -1;
 	}
 	else if (choice == 3)
 	{
 		printf("wrong");
-		que1 = 0;
+		que1 = -1;
 	}
 	else if (choice == 4)
 	{
 		printf("wrong");
-		que1 = 0;
+		que1 = -1;
 	}
 	else if (choice == 1)
 	{
@@ -56,17 +56,17 @@ int main()
 	if (choice2 == 1)
 	{
 		printf("wrong");
-		que2 = 0;
+		que2 = -1;
 	}
 	else if (choice2 == 2)
 	{
 		printf("wrong");
-		que2 = 0;
+		que2 = -1;
 	}
 	else if (choice2 == 4)
 	{
 		printf("wrong");
-		que2 = 0;
+		que2 = -1;
 	}
 	else if (choice2 == 3)
 	{
@@ -82,17 +82,17 @@ int main()
 	if (choice3 == 1)
 	{
 		printf("wrong");
-		que3 = 0;
+		que3 = -1;
 	}
 	else if (choice3 == 2)
 	{
 		printf("wrong");
-		que3 = 0;
+		que3 = -1;
 	}
 	else if (choice3 == 3)
 	{
 		printf("wrong");
-		que3 = 0;
+		que3 = -1;
 	}
 	else if (choice3 == 4)
 	{
