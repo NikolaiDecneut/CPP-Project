@@ -34,7 +34,7 @@ int main()
 	std::cin >> n;
 	fseek(stdin, 0, SEEK_END);
 	// the code above is for the users name.
-	printf("Hello %s this app will calculate your average speed in MPH and estimate how many gallons of fuel were used by your car\n", s.c_str());
+	printf("Hello %s this app will calculate your average speed in MPH and estimate how many gallons of fuel were used by your car\n", n.c_str());
 	printf("To be able to calculate your speed i will need to know far you traveled in miles, how long you traveled in hours, \nand the gallons of fuel that were used.\n\n");
 	printf("%s please input how far you traveled in miles : ", n.c_str());
 	float miles;
@@ -45,16 +45,16 @@ int main()
 	scanf_s("%.1f", &hours);
 	fseek(stdin, 0, SEEK_END);
 	float gall;
-	printf("\n\nFinal one %s, tell me how many gallons of fuel your car used on your trip : ", .c_str());
+	printf("\n\nFinal one %s, tell me how many gallons of fuel your car used on your trip : ", n.c_str());
 	scanf_s("%.1f", &gall);
 	fseek(stdin, 0, SEEK_END);
 
 	float mph;
 	mph = miles / hours;
-	printf("\n\n%s you were traveling at an average of  %.1f mph\n", s.c_str(), mph);
+	printf("\n\n%s you were traveling at an average of  %.1f mph\n", n.c_str(), mph);
 	float mpg;
 	mpg = miles / gall;
-	printf("%s if your car used all its gas it would have an estimated %.1f mpg\n\n", s.c_str(), mpg);
+	printf("%s if your car used all its gas it would have an estimated %.1f mpg\n\n", n.c_str(), mpg);
 	printf(" Press any key to close this window.\n\n");
 
 
