@@ -1,5 +1,3 @@
-
-
 #include <stdio.h>
 #include <iostream>
 #include <conio.h>
@@ -18,35 +16,28 @@ int main()
 	fseek(stdin, 0, SEEK_END);
 	printf(" %s in this quiz you will be given 3 questions and have 4 mulitple choice answers. each question is worth 1 point, if you get the question wrong you will subtracted .25 points\n\n", n.c_str());
 	int que1 = 0;
+	int answer1;
 	printf(" %s whcih is the wrong statement?\n", n.c_str());
 	printf(" 1. printf("")\n 2. float choice = 0\n 3. float choice = 0.0\n 4. Printf("")\n");
 	scanf_s("%d", &que1);
 	fseek(stdin, 0, SEEK_END);
 	switch (que1)
 	{
-	case 1: 
-		int que1 = -0.25;
+	case 1:
 		printf("wrong\n");
-		
+		int answer1 = -.25;
 		break;
 	case 2:
-		if (int que1 = 1);
 		printf("correct\n");
-	
+		int answer1 = 1;
 		break;
 	case 3:
-		if (int que1 = 3);	
 		printf("wrong\n");
-		
+		int answer1 = -.25;
 		break;
 	case 4:
-		if (int que1 = 4);
 		printf("correct\n");
-		
-		break;
-	default:
-		printf("error incorrect entry\n");
-		int que1 = 0;
+		int answer1 = 1;
 		break;
 	}
 
@@ -78,28 +69,5 @@ int main()
 
 	printf(“Lots of other stuff needs to happen here.”);
 	*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	return 0;
 }
-
-

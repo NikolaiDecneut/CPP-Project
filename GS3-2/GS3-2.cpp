@@ -1,6 +1,15 @@
-// bool i need help
-
-
+/*	Name: Nikolai Decneut
+	Problem: create a scientific quiz
+	Pseudocode:
+	get the users name
+	give instructions
+	ask questions and get answer usiong else if
+	give the use their score
+	Notes: none
+	Maintenance log:
+		Date:		Done:
+		11/23/20	created a science quiz using else if
+*/
 
 
 #include <stdio.h>
