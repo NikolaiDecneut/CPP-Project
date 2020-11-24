@@ -1,4 +1,15 @@
-
+/*	Name: Nikolai Decneut
+	Problem: create a programming quiz
+	Pseudocode:
+	get the users name
+	give instructions
+	ask questions and get answer using switches
+	give the use their score
+	Notes: none
+	Maintenance log:
+		Date:		Done:
+		11/24/20	created a programming quiz using switches
+*/
 
 
 #include <stdio.h>
