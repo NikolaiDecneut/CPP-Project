@@ -10,7 +10,22 @@
 int main()
 
 {
-	float float1 = 0.0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*	float float1 = 0.0;
 	float float1max = 1.0;
 	float rf;
 	rf = (float)rand() / (float)RAND_MAX;

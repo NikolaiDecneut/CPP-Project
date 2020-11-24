@@ -1,3 +1,6 @@
+
+
+
 #include <stdio.h>
 #include <iostream>
 #include <conio.h>
@@ -25,49 +28,85 @@ int main()
 	{
 	case 1:
 		printf("wrong\n");
-		int answer1 = -.25;
+		answer1 = -.25;
 		break;
 	case 2:
 		printf("correct\n");
-		int answer1 = 1;
+		answer1 = 1;
 		break;
 	case 3:
 		printf("wrong\n");
-		int answer1 = -.25;
+		answer1 = -.25;
 		break;
 	case 4:
 		printf("correct\n");
-		int answer1 = 1;
+		answer1 = 1;
 		break;
+	default:
+		printf("error unidentified");
+		answer1 = 0;
 	}
-
-
-	/*
-	int choice = 0;
-	scanf_s(“ % d”, &choice);
+	printf(" \n%s select what would be valid for a string\n", n.c_str());
+	printf(" 1. bobby.\n 2. DaNNy\n 3. S@%?pes\n 4. all of the above are invalid\n");
+	int que2 = 0;
+	int answer2;
+	scanf_s("%d", &que2);
 	fseek(stdin, 0, SEEK_END);
-
-	switch (choice)
+	switch (que2)
 	{
 	case 1:
-		printf(“Menu item 1\n”);
-		// do other stuff here
+		printf("wrong");
+		answer2 = -.25;
 		break;
 	case 2:
-		printf(“Menu item 2\n”);
-		// do other stuff here
+		printf("correct");
+		answer2 = 1;
+		break;
+	case 3: 
+		printf("wrong");
+		answer2 = -.25;
+		break;
+	case 4:
+		printf("wrong");
+		answer2 = -.25;
+		break;
+	default:
+		printf("error unidentified");
+		answer2 = 0;
+	}
+	printf(" \n%s which of the following is the incorrect comparator.\n", n.c_str());
+	printf(" 1. ==\n 2. =!\n 3. <=\n 4. all of the above are valid.\n");
+	int que3 = 0;
+	int answer3;
+	scanf_s("%d", &que3);
+	fseek(stdin, 0, SEEK_END);
+	switch (que3)
+	{
+	case 1:
+		printf("wrong");
+		answer3 = -.25;
+		break;
+	case 2:
+		printf("correct");
+		answer3 = 1;
 		break;
 	case 3:
-		printf(“Menu item 3\n”);
-		// do other stuff here
+		printf("wrong");
+		answer3 = -.25;
 		break;
-	default:	// default.  In this case an error message
-		printf(“That is not a choice on the menu.\n”);
-		// do other stuff here
+	case 4:
+		printf("wrong");
+		answer3 = -.25;
+		break;
+	default:
+		printf("error unidentified");
+		answer3 = 0;
 		break;
 	}
+	int score;
+	score = answer1 + answer2 + answer3;
+	printf("\n\n%s here is your quiz score %d", n.c_str(), score);
+	printf("\nPress and key to continue.");
 
-	printf(“Lots of other stuff needs to happen here.”);
-	*/
 	return 0;
 }
