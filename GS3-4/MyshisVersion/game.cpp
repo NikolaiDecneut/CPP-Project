@@ -14,8 +14,14 @@ void Base::clearterm(){
     }
 }
 
-
-void Base::Open::doCache(std::tuple<int, int> loc){
+bool Base::Open::exist(){
+    std::ifstream file( "config/config.txt", std::ios::binary | std::ios::ate);
+    if (file.tellg() > 0){
+        return true;
+    }
+    return false;
+}
+void Base::Open::doCache(std::tuple<int, int, std::string> loc){
     std::ofstream log("log.msg");
     std::ofstream config("config/config.txt");
     if (std::get<0>(loc)){
@@ -26,9 +32,12 @@ void Base::Open::doCache(std::tuple<int, int> loc){
         config << std::get<1>(loc);
         log << "Added loc<1> to config file";
     }
+    config << std::get<2>(loc);
+    log << "Added loc<2> to config file";
+
     config.close();
 }
-void Base::Open::getCache(std::tuple<int, int> &loc){
+void Base::Open::getCache(std::tuple<int, int, std::string> &loc){
     std::ifstream config("config/config.txt");
     std::ofstream log("log.msg");
     std::string line;
@@ -42,6 +51,7 @@ void Base::Open::getCache(std::tuple<int, int> &loc){
     }
     std::string depthString;
     std::string choiceString;
+    std::string name = std::get<2>(loc);
     if(line != ""){
         char l = ' ';
         for(int i = 0; line.length(); i++){
@@ -54,7 +64,7 @@ void Base::Open::getCache(std::tuple<int, int> &loc){
         }
         choiceString.erase(0);
     }
-    loc=std::make_tuple(std::stoi(depthString), std::stoi(choiceString));
+    loc=std::make_tuple(std::stoi(depthString), std::stoi(choiceString), name);
 }
 std::string Base::Color::colorStr(std::string str, char color){
     switch(color){

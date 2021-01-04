@@ -6,10 +6,9 @@
 
 namespace Player{
     class player{
-        std::tuple <int, int> loc;
     public:
-        std::string name;
         char color = 'w';
+        std::tuple <int, int, std::string> playerInfo;
         void updateLocation(int depth, int option);
     };
 }

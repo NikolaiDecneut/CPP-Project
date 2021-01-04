@@ -10,8 +10,9 @@ namespace Base{
     void consolePrintMSG(std::string message, char clr);
     class Open{
     public:
-        void getCache(std::tuple<int, int>& loc);
-        void doCache(std::tuple<int, int> loc);
+        void getCache(std::tuple<int, int, std::string>& loc);
+        void doCache(std::tuple<int, int, std::string> loc);
+        bool exist();
     };
 
     enum class States{NEW_GAME = 'N', QUIT = 'q'};
