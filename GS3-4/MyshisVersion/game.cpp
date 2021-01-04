@@ -5,7 +5,7 @@
 #include <tuple>
 template<class T>
 auto Base::get(T value){
-    return T;
+    return value;
 }
 void Base::clearterm(){
     for(int i = 0; i < 50; i++){
@@ -42,9 +42,9 @@ void Base::Open::getCache(std::tuple<int, int> &loc){
     std::string depthString;
     std::string choiceString;
     if(line != ""){
-        char* l = " ";
+        char l = ' ';
         for(int i = 0; line.length(); i++){
-            if(line[i]!=*l){
+            if(line[i]!= l){
                 depthString.push_back(line[i]);
             }
             else{
@@ -55,7 +55,7 @@ void Base::Open::getCache(std::tuple<int, int> &loc){
     }
     loc=std::make_tuple(std::stoi(depthString), std::stoi(choiceString));
 }
-std::string Base::Color::colorStr(std::string &str, char* color){
+std::string Base::Color::colorStr(std::string str, char* color){
     switch(*color){
         case 'r':
             str.append(RST);
@@ -74,4 +74,12 @@ std::string Base::Color::colorStr(std::string &str, char* color){
             str.insert(0, KWHT);
             break;
     }
+    return str;
+}
+
+template<class T>
+void Base::consoleMSG(T message, char clr)
+{
+    Base::Color color;
+    std::cout << color.colorStr(message, clr) << std::endl;
 }

@@ -1,15 +1,17 @@
 CC = g++
 CFLAGS  = -g -Wall
 
-default: all
+default: game
 
-game:  character.o game.o 
-	$(CC) $(CFLAGS) -o game character.o game.o
+game:  character.o game.o main.o
+	$(CC) $(CFLAGS) -o game character.o game.o main.o
 
-character.o:  character.cpp header/character.h
+bin/character.o:  character.cpp header/character.h
 	$(CC) $(CFLAGS) -c character.cpp
 
-game.o:  counter.c header/Game.h
+bin/game.o:  game.cpp header/Game.h
 	$(CC) $(CFLAGS) -c game.cpp
+bin/main.o: main.cpp
+	$(CC) $(CFLAGS) -c main.cpp
 clean: 
 	$(RM) game *.o *~
