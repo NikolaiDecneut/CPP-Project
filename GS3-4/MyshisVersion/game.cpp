@@ -78,8 +78,7 @@ std::string Base::Color::colorStr(std::string str, char* color){
 }
 
 template<class T>
-void Base::consoleMSG(T message, char clr)
-{
+void Base::consolePrintMSG(T message, char clr){
     Base::Color color;
-    std::cout << color.colorStr(message, clr) << std::endl;
+    std::cout << color.colorStr(message, &clr) << std::endl;
 }

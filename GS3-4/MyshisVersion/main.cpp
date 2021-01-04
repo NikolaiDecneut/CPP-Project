@@ -11,6 +11,6 @@ int main(){
 
     //Main menu
     Base::clearterm();
-    Base::consoleMSG("Welcome to your own adventure where you choose what happens", 'w');
+    Base::consolePrintMSG("Welcome to your own adventure where you choose what happens", 'w');
     return 0;
 }

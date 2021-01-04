@@ -9,9 +9,11 @@ game:  character.o game.o main.o
 bin/character.o:  character.cpp header/character.h
 	$(CC) $(CFLAGS) -c character.cpp
 
-bin/game.o:  game.cpp header/Game.h
-	$(CC) $(CFLAGS) -c game.cpp
 bin/main.o: main.cpp
 	$(CC) $(CFLAGS) -c main.cpp
+
+bin/game.o:  game.cpp header/Game.h
+	$(CC) $(CFLAGS) -c game.cpp
+
 clean: 
 	$(RM) game *.o *~
