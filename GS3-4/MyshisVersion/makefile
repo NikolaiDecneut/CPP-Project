@@ -17,3 +17,4 @@ bin/game.o:  game.cpp header/Game.h
 
 clean: 
 	$(RM) game *.o *~
+	$(RM) saves/*.txt
