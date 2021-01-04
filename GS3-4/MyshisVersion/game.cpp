@@ -3,6 +3,7 @@
 #include <fstream>
 #include <string>
 #include <tuple>
+#include <limits>
 std::string Base::get(){
     std::string value;
     std::cin >> value;
@@ -15,7 +16,7 @@ void Base::clearterm(){
 }
 
 bool Base::Open::exist(){
-    std::ifstream file( "config/config.txt", std::ios::binary | std::ios::ate);
+    std::ifstream file( "saves/save.txt", std::ios::binary | std::ios::ate);
     if (file.tellg() > 0){
         return true;
     }
@@ -23,48 +24,59 @@ bool Base::Open::exist(){
 }
 void Base::Open::doCache(std::tuple<int, int, std::string> loc){
     std::ofstream log("log.msg");
-    std::ofstream config("config/config.txt");
-    if (std::get<0>(loc)){
-        config << std::get<0>(loc) << " ";
-        log << "Added loc<0> to config file";
-    }
-    if (std::get<1>(loc)){
-        config << std::get<1>(loc);
-        log << "Added loc<1> to config file";
-    }
-    config << std::get<2>(loc);
-    log << "Added loc<2> to config file";
+    std::ofstream config("saves/save.txt");
+
+    config << std::get<0>(loc) << " ";
+    log << "Added loc<0> to config file \n";
+    
+    config << std::get<1>(loc) << " ";
+    log << "Added loc<1> to config file \n";
+
+    config << std::get<2>(loc) << " ";
+    log << "Added loc<2> to config file \n";
 
     config.close();
 }
-void Base::Open::getCache(std::tuple<int, int, std::string> &loc){
-    std::ifstream config("config/config.txt");
+int Base::Open::getCache(std::tuple<int, int, std::string> &loc){
+    std::string saveName = "saves/save.txt";
+    std::ifstream save(saveName);
     std::ofstream log("log.msg");
-    std::string line;
-    if (config.is_open())
-    {
-        while (getline(config,line))
-        {
-            log << line << ":  was read";
-        }
-        config.close();
-    }
-    std::string depthString;
-    std::string choiceString;
-    std::string name = std::get<2>(loc);
-    if(line != ""){
-        char l = ' ';
-        for(int i = 0; line.length(); i++){
-            if(line[i]!= l){
+    std::string line;    
+    
+    while(std::getline(save, line)){
+        save.close();
+
+        std::string depthString;
+        std::string choiceString;
+        std::string name;
+        if(line != ""){
+            char l = ' ';
+            int i = 0;
+            for(; line[i] != l; i++){
                 depthString.push_back(line[i]);
             }
-            else{
+            i++;
+            for(; line[i] != l; i++){
                 choiceString.push_back(line[i]);
             }
+            i++;
+            for(; line[i] != l; i++){
+                name.push_back(line[i]);
+            }
         }
-        choiceString.erase(0);
+        loc = std::make_tuple(std::stoi(depthString), std::stoi(choiceString), name);
+        return 0;
     }
-    loc=std::make_tuple(std::stoi(depthString), std::stoi(choiceString), name);
+    std::cout << "ERROR: Take a look at log.msg" << std::endl;
+    log << "ERROR: could not see any lines in " << saveName;
+    return -100;
+}
+std::fstream& Base::Open::goToLine(std::fstream& file, unsigned int num){
+    file.seekg(std::ios::beg);
+    for(int i=0; i < num - 1; ++i){
+        file.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+    }
+    return file;
 }
 std::string Base::Color::colorStr(std::string str, char color){
     switch(color){

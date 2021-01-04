@@ -9,8 +9,9 @@ namespace Base{
     void clearterm();
     void consolePrintMSG(std::string message, char clr);
     class Open{
+        std::fstream& goToLine(std::fstream& file, unsigned int num);
     public:
-        void getCache(std::tuple<int, int, std::string>& loc);
+        int getCache(std::tuple<int, int, std::string>& loc);
         void doCache(std::tuple<int, int, std::string> loc);
         bool exist();
     };

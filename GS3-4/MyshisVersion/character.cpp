@@ -1,4 +1,5 @@
 #include "header/character.h"
 void Player::player::updateLocation(int depth, int option){
-    Player::player::loc = std::make_tuple(depth, option);
+    std::get<0>(Player::player::playerInfo) = depth;
+    std::get<1>(Player::player::playerInfo) = option;
 }
