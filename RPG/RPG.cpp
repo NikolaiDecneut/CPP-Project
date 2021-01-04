@@ -20,10 +20,11 @@ Date:		Done:
 #include <time.h>
 #include <stdlib.h>
 #include <string>
+#include <string>
 int main()
 {
 	std::string n;
-	printf("Tell me your name (no spaces allowed): ");
+	printf("Tell me your name: ");
 	std::cin >> n;
 	fseek(stdin, 0, SEEK_END);
 
@@ -37,13 +38,44 @@ int main()
 	scanf_s("%d", &health);
 	fseek(stdin, 0, SEEK_END);
 	printf("Thank you.\n\n");
+	bool ready = false;
+	int equipment = 0;
+	std::string equipmentName = "";
+	do
+	{
+		char choice;
+		printf("\n\nYou get to choose one item before you begin.\n");
+		printf("Which would you like?\n");
+		printf("\tA. Pen\n");
+		printf("\tB. Text book\n");
+		printf("\tC. Graphing calculater\n");
+		printf(">>>  ");
+		scanf("%c", &choice);
+		fseek(stdin, 0, SEEK_END);
+		ready = true;
+		switch (choice)
+		{
+		case 'A': case 'a':
+			equipment = 1;
+			equipmentName = "pen";
+			break;
+		case 'B': case 'b':
+			equipment = 2;
+			equipmentName = "Text book";
+			break;
+		case 'C': case 'c':
+			equipment = 3;
+			equipmentName = "Graphing calculater";
+			break;
+		default:
+			printf("You must choose to arm yourself with something.");
+			ready == false;
+			break;
+		}
 
-	return 0;
-
-
-	
 
 
 
-
-}
+		
+	}
+}	
