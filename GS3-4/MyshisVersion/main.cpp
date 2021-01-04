@@ -6,12 +6,25 @@
 int main(){
     //INIT
 
-    Base::Color color;
-    Base::Open cache;
-    Player::player player;
+    Base::Color                 color;
+    Base::Open                  cache;
+    Player::player              player;
+    Player::player              narrator;
+    Player::player              sergent;
+
+    narrator.color = 'b';
+    sergent.color = 'r';
 
     //Main menu
-    Base::clearterm();
-    Base::consolePrintMSG("Welcome to your own adventure where you choose what happens", player.color);
+    using namespace Base;
+    clearterm();
+    consolePrintMSG("Welcome to your own adventure where you choose what happens", narrator.color);
+    consolePrintMSG("Enter your name:   ", narrator.color);
+    
+    player.name = get();
+    clearterm();
+
+    consolePrintMSG("Welcome to the game "+ player.name + "!", narrator.color);
+
     return 0;
 }

@@ -3,8 +3,9 @@
 #include <fstream>
 #include <string>
 #include <tuple>
-template<class T>
-auto Base::get(T value){
+std::string Base::get(){
+    std::string value;
+    std::cin >> value;
     return value;
 }
 void Base::clearterm(){

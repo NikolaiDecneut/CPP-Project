@@ -5,8 +5,7 @@
 #include <map>
 #include "Color.h"
 namespace Base{
-    template<class T>
-    auto get(T value);
+    std::string get();
     void clearterm();
     void consolePrintMSG(std::string message, char clr);
     class Open{
