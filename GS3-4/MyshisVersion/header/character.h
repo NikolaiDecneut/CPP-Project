@@ -7,7 +7,8 @@
 namespace Player{
     class player{
     public:
-        char color = 'w';
+        bool death;
+        char color;
         std::tuple <int, int, std::string> playerInfo;
         void updateLocation(int depth, int option);
     };

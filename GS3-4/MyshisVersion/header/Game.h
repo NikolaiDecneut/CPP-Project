@@ -5,7 +5,8 @@
 #include <map>
 #include "Color.h"
 namespace Base{
-    std::string get();
+    int get();
+    std::string getStr();
     void clearterm();
     void consolePrintMSG(std::string message, char clr);
     class Open{
@@ -15,10 +16,11 @@ namespace Base{
         void doCache(std::tuple<int, int, std::string> loc);
         bool exist();
     };
-
-    enum class States{NEW_GAME = 'N', QUIT = 'q'};
+    void pause(int milliseconds);
+    enum Commands{NEW_GAME = 'N', QUIT = 'q'};
     class Color{
     public:
         std::string colorStr(std::string str, char color);
     };
+
 };

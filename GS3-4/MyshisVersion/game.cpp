@@ -4,7 +4,15 @@
 #include <string>
 #include <tuple>
 #include <limits>
-std::string Base::get(){
+#include <chrono>
+#include <thread>
+
+int Base::get(){
+    int value;
+    std::cin >> value;
+    return value;
+}
+std::string Base::getStr(){
     std::string value;
     std::cin >> value;
     return value;
@@ -78,22 +86,34 @@ std::fstream& Base::Open::goToLine(std::fstream& file, unsigned int num){
     }
     return file;
 }
+void Base::pause(int milliseconds= 1000){
+    std::this_thread::sleep_for(std::chrono::milliseconds(milliseconds));
+}
 std::string Base::Color::colorStr(std::string str, char color){
+    str.append(RST);
     switch(color){
         case 'r':
-            str.append(RST);
             str.insert(0, KRED);
             break;
         case 'b':
-            str.append(RST);
             str.insert(0, KBLU);
             break;
         case 'w':
-            str.append(RST);
             str.insert(0, KWHT);
             break;
+        case 'g':
+            str.insert(0, KGRN);
+            break;
+        case 'm':
+            str.insert(0, KMAG);
+            break;
+        case 'y':
+            str.insert(0, KYEL);
+            break;
+        case 'c':
+            str.insert(0, KCYN);
+            break;
         default:
-            str.append(RST);
             str.insert(0, KWHT);
             break;
     }
@@ -104,3 +124,5 @@ void Base::consolePrintMSG(std::string message, char clr){
     Color color;
     std::cout << color.colorStr(message, clr) << std::endl;
 }
+
+
