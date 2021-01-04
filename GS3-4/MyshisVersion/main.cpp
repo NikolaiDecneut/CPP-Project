@@ -2,6 +2,7 @@
 #include "header/character.h"
 #include <bits/stdc++.h>
 
+
 int main(){
     //INIT
 
@@ -11,6 +12,6 @@ int main(){
 
     //Main menu
     Base::clearterm();
-    Base::consolePrintMSG("Welcome to your own adventure where you choose what happens", 'w');
+    Base::consolePrintMSG("Welcome to your own adventure where you choose what happens", player.color);
     return 0;
 }

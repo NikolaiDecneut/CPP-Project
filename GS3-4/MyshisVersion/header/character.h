@@ -9,7 +9,7 @@ namespace Player{
         std::tuple <int, int> loc;
     public:
         std::string name;
-
+        char color = 'w';
         void updateLocation(int depth, int option);
     };
 }

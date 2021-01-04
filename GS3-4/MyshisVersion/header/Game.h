@@ -8,8 +8,7 @@ namespace Base{
     template<class T>
     auto get(T value);
     void clearterm();
-    template<class T>
-    void consolePrintMSG(T message, char clr);
+    void consolePrintMSG(std::string message, char clr);
     class Open{
     public:
         void getCache(std::tuple<int, int>& loc);
@@ -19,6 +18,6 @@ namespace Base{
     enum class States{NEW_GAME = 'N', QUIT = 'q'};
     class Color{
     public:
-        std::string colorStr(std::string str, char* color);
+        std::string colorStr(std::string str, char color);
     };
 };

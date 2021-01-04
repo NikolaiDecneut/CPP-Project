@@ -55,8 +55,8 @@ void Base::Open::getCache(std::tuple<int, int> &loc){
     }
     loc=std::make_tuple(std::stoi(depthString), std::stoi(choiceString));
 }
-std::string Base::Color::colorStr(std::string str, char* color){
-    switch(*color){
+std::string Base::Color::colorStr(std::string str, char color){
+    switch(color){
         case 'r':
             str.append(RST);
             str.insert(0, KRED);
@@ -77,8 +77,7 @@ std::string Base::Color::colorStr(std::string str, char* color){
     return str;
 }
 
-template<class T>
-void Base::consolePrintMSG(T message, char clr){
-    Base::Color color;
-    std::cout << color.colorStr(message, &clr) << std::endl;
+void Base::consolePrintMSG(std::string message, char clr){
+    Color color;
+    std::cout << color.colorStr(message, clr) << std::endl;
 }
