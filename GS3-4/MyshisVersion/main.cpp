@@ -11,6 +11,8 @@ int main(){
         {"shot", "*You ran and got shot*\n GAME OVER."}
     };
 
+    std::ofstream log("log.msg");
+
     Base::Color                 color;
     Base::Open                  cache;
     Player::player              player;
@@ -22,6 +24,8 @@ int main(){
     narrator.color = 'w';
     sergent.color = 'r';
     patrol.color = 'c';
+
+    log << "Init phase over\n";
 
     //Main menu
     using namespace Base;
@@ -35,6 +39,7 @@ int main(){
         switch(getStr()[0]){
             case 'y':
                 if (cache.getCache(player.playerInfo) == 0){
+                    log << "Loaded Save\n";
                     loadedFile = true;
                 }
                 break;
@@ -140,6 +145,7 @@ int main(){
                     case 2:
                         choice *= 2;
                         consolePrintMSG("Thats it private your going to detention.", patrol.color);
+                        pause(3000);
                         break;
                 }
             }
