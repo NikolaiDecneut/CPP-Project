@@ -82,13 +82,6 @@ int Base::Open::getCache(std::tuple<int, int, std::string> &loc){
     log << "ERROR: could not see any lines in " << saveName;
     return -100;
 }
-std::fstream& Base::Open::goToLine(std::fstream& file, unsigned int num){
-    file.seekg(std::ios::beg);
-    for(int i=0; i < num - 1; ++i){
-        file.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
-    }
-    return file;
-}
 void Base::pause(int milliseconds= 1000){
     std::this_thread::sleep_for(std::chrono::milliseconds(milliseconds));
 }

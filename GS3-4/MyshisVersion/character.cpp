@@ -6,4 +6,4 @@ void Player::player::updateLocation(int depth, int option){
     std::get<0>(playerInfo) = depth;
     std::get<1>(playerInfo) = option;
     cache.doCache(playerInfo);
-}
+}   
