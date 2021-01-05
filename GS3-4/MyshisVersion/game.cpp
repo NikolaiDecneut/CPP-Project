@@ -18,7 +18,7 @@ std::string Base::getStr(){
     return value;
 }
 void Base::clearterm(){
-    for(int i = 0; i < 50; i++){
+    for(int i = 0; i < 100; i++){
         std::cout << std::endl;
     }
 }

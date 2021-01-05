@@ -21,9 +21,46 @@
 #include <stdlib.h>
 #include <cstdio>
 #include <stdbool.h>
+#include "Color.h"
+
+char sergeantColor = 'r';
+char playerColor = 'b';
+char narratorColor = 'w';
+
+
+std::string colorMSG(std::string value, char color){
+	value.append(RST);
+	switch (color)
+	{
+	case 'r':
+		value.insert(0, KRED);
+		break;
+	case 'g':
+		value.insert(0, KGRN);
+		break;
+	case 'b':
+		value.insert(0, KBLU);
+		break;
+	case 'w':
+		value.insert(0, KWHT);
+		break;
+	case 'm':
+		value.insert(0, KMAG);
+		break;
+	case 'y':
+		value.insert(0, KYEL);
+		break;
+	case 'c':
+		value.insert(0, KCYN);
+		break;
+	default:
+		break;
+	}
+}
 
 int main()
 {
+	printf("%s this will be red->", colorMSG("Hello World!", sergeantColor));
 	printf(" Welcome to your own adventure where you choose what happens; tell me your name: \n");
 	std::string n;
 	std::cin >> n;
