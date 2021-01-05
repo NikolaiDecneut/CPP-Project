@@ -89,11 +89,20 @@ int main(){
             switch(choice){
                 case 1:
                     choice *= 1;
-                    /* Stuff for after yeah thats what i thought*/
+                    consolePrintMSG("Yeah that's what I thought magot", sergent.color);
                     break;
                 case 2:
                     choice *= 2;
-                    /* after punch */
+                        consolePrintMSG("*you wake up 30 minutes later with a bad headache and notice that a patrol is heading you way for a checkin.*", narrator.color);
+                        pause(1000);
+                        consolePrintMSG("Oh no, what am i gonna say when the patrol asks why i didnt checkin. Let me go and speak with them and try to get out of this.", player.color);
+                        pause(1000);
+                        consolePrintMSG("*the patrol arrives at your position.*", narrator.color);
+                        pause(1000);
+                        consolePrintMSG("Hey private, why didnt you checkin with your report.", patrol.color);
+                        pause(1000);                            
+                        consolePrintMSG("You now have a choice do you snitch[1] on the sergeant or lie[2] for him?", narrator.color);
+                        pause(1000);
                     break;
                 case 3:
                     choice *= 3;
@@ -102,15 +111,15 @@ int main(){
                         case 1:
                             consolePrintMSG(action.find("punched")->second, narrator.color);
                             consolePrintMSG("*you wake up 30 minutes later with a bad headache and notice that a patrol is heading you way for a checkin.*", narrator.color);
-                            pause(1000);
+                            pause(3000);
                             consolePrintMSG("Oh no, what am i gonna say when the patrol asks why i didnt checkin. Let me go and speak with them and try to get out of this.", player.color);
-                            pause(1000);
+                            pause(2000);
                             consolePrintMSG("*the patrol arrives at your position.*", narrator.color);
                             pause(1000);
                             consolePrintMSG("Hey private, why didnt you checkin with your report.", patrol.color);
-                            pause(1000);                            
+                            pause(2000);                            
                             consolePrintMSG("You now have a choice do you snitch[1] on the sergeant or lie[2] for him?", narrator.color);
-                            pause(1000);
+                            pause(2000);
 
                     }
             }
@@ -118,8 +127,46 @@ int main(){
         }
         if(depth == 2)
         {
-            switch(choice){
-
+            if(choice == 6 || choice == 9){
+                switch(get()){
+                    case 1:
+                        choice *= 1;
+                        consolePrintMSG("Okay, I'll talk to the sergeant about messing with the guards. Thank you private.", patrol.color);
+                        break;
+                    case 2:
+                        choice *= 2;
+                        consolePrintMSG("Thats it private your going to detention.", patrol.color);
+                        break;
+                }
+            }
+            else
+            {
+                /* Stuff for yeah thats what i thought */
+            }
+            ++depth;
+        }
+        if(depth == 3){
+            if(choice == 6 || choice == 9){
+                consolePrintMSG("Okay they are at a meeting now is a perfct time to run, do you?", narrator.color);
+                consolePrintMSG("1.Run\n 2.Stay at your post.\n", narrator.color);
+                switch(get()){
+                    case 1:
+                        consolePrintMSG(action.find("shot")->second, narrator.color);
+                        break;
+                    case 2:
+                        consolePrintMSG("*They come back to you*", narrator.color);
+                        pause(2000);
+                        consolePrintMSG("Looks like its your unlucky day private, sergeant has friends in high places.", patrol.color);
+                        pause(5000);
+                        consolePrintMSG("He raises his gun in between your eyebrows...", narrator.color);
+                        pause(2500);
+                        consolePrintMSG("Please, we can ta-", player.color);
+                        pause(2500);
+                        gameOver();
+                }
+            }
+            else{
+                gameOver();
             }
         }
 

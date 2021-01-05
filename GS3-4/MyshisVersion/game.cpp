@@ -18,11 +18,14 @@ std::string Base::getStr(){
     return value;
 }
 void Base::clearterm(){
-    for(int i = 0; i < 100; i++){
+    for(int i = 0; i <= 100; i++){
         std::cout << std::endl;
     }
 }
-
+void Base::gameOver(){
+    clearterm();
+    consolePrintMSG("...YOU HAVE DIED...", 'y');
+}
 bool Base::Open::exist(){
     std::ifstream file( "saves/save.txt", std::ios::binary | std::ios::ate);
     if (file.tellg() > 0){
