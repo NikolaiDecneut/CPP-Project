@@ -32,11 +32,14 @@ int main()
 	printf("In this game you will have to defeat enemies\n");
 	printf("explore 25 rooms and defeat a boss.\n\n");
 	printf("Welcome to the start menu\n");
-	int const damage = 15;
+	int damage = 15;
 	int health;
+	
 	printf("%s please enter how many hitpoints you would like (it may vairy from 100-250, 100 being the hardest and 250 being the easiest: \n", n.c_str());
 	scanf_s("%d", &health);
 	fseek(stdin, 0, SEEK_END);
+	
+
 	printf("Thank you.\n\n");
 	bool ready = false;
 	int equipment = 0;
@@ -50,32 +53,32 @@ int main()
 		printf("\tB. Text book\n");
 		printf("\tC. Graphing calculater\n");
 		printf(">>>  ");
-		scanf("%c", &choice);
+		scanf_s("%c", &choice);
 		fseek(stdin, 0, SEEK_END);
-		ready = true;
+		
 		switch (choice)
 		{
 		case 'A': case 'a':
 			equipment = 1;
 			equipmentName = "pen";
+			ready = true;
 			break;
 		case 'B': case 'b':
 			equipment = 2;
 			equipmentName = "Text book";
+			ready = true;
 			break;
 		case 'C': case 'c':
 			equipment = 3;
 			equipmentName = "Graphing calculater";
+			ready = true;
 			break;
 		default:
 			printf("You must choose to arm yourself with something.");
-			ready == false;
+			ready = false;
 			break;
 		}
+	} while (!ready);
 
-
-
-
-		
-	}
-}	
+	
+}
