@@ -126,18 +126,64 @@ int main()
 			{
 				printf("You found a Text book.\n");
 				printf("Would you like to trade your %s for a Text book?   (Y/N)  >>>  ", equipmentName.c_str());
+				scanf("%c", &choice);
+				fseek(stdin, 0, SEEK_END);
+				choice = toupper(choice);
+				if (choice == 'Y')
+				{
+					equipment = 1;
+				}
+				else
+				{
+					if (1 <= timesThrough)
+					{ 
+						printf("Are you sure you do not want the Text book?  (Y/N)  >>>  ");
+						scanf("%c", &choice);
+						fseek(stdin, 0, SEEK_END);
+						choice = toupper(choice);
+						if (choice == 'N')
+						{
+							continue; // back to the top of the loop
+						}
 
+					}
+				}
+
+			}
+
+			printf("\nWould you like to go to the third room?  (Y/N)  >>>  ");
+			scanf("%c", &choice);
+			fseek(stdin, 0, SEEK_END);
+			choice = toupper(choice);
+			if (choice == 'Y')
+			{
+				room = 2;
+			}
+			timesThrough++;
+		}
+		else if (room == 2)
+		{
+			printf("This is the third room\n");
+			if (equipment != 1)
+			{
+				printf("\n\nYou do not have a pen. You must go back to the first room.\n");
+				room = 0;
+				printf("Press any key to go back to the first room.\n\n");
+				_getch();
+				fseek(stdin, 0, SEEK_END);
+			}
+			else
+			{
+				exit = true;
 			}
 		}
 
+	} while (!exit);
 
+	printf("\n\nWay to go! You made it past all the rooms!\n\n");
 
-
-
-
-	}
-
-
-
-	
+	// keep these at the end of the Main()
+	printf("\n\nPress any key to exit the game.");
+	_getch();
+	return 0;
 }
