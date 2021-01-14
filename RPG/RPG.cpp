@@ -78,7 +78,66 @@ int main()
 			ready = false;
 			break;
 		}
+
+		if (equipment != 0)
+		{
+			printf("A %s is a great choice.", equipmentName.c_str());
+		}
+
+		if (!ready)
+		{
+			continue;
+		}
+
+		printf("\n\n\nAre you ready to play the game? >>>   ");
+		scanf("%c", &choice);
+		fseek(stdin, 0, SEEK_END);
+		if (toupper(choice) == 'N')
+		{
+			ready = false;
+			printf("\n Okay. Let us equip you again.\n");
+		}
+
 	} while (!ready);
+	
+	bool exit = false;
+	int room = 0;
+	int timesThrough = 0;
+
+	do
+	{
+		char choice;
+		if (room == 0)
+		{
+			printf("This is the first room\n");
+			printf("Would you like to go to the second room?   (Y/N)  >>>   ");
+			scanf("%c", &choice);
+			fseek(stdin, 0, SEEK_END);
+			choice = toupper(choice);
+			if (choice == 'Y')
+			{
+				room = 1;
+			}
+		}
+		else if (room == 1)
+		{
+			printf("This is the second room\n");
+			if (equipment != 1) // not the pen
+			{
+				printf("You found a Text book.\n");
+				printf("Would you like to trade your %s for a Text book?   (Y/N)  >>>  ", equipmentName.c_str());
+
+			}
+		}
+
+
+
+
+
+
+	}
+
+
 
 	
 }

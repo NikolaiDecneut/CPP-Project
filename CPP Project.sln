@@ -31,6 +31,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GS3-4", "GS3-4\GS3-4.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Try code", "Try code\Try code.vcxproj", "{DFE5CA99-113B-4100-9080-1D5561AA703C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KeyLogger", "KeyLogger\KeyLogger.vcxproj", "{5C53E7CA-FADE-4215-9608-3C7498BEDBE1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -151,6 +153,14 @@ Global
 		{DFE5CA99-113B-4100-9080-1D5561AA703C}.Release|x64.Build.0 = Release|x64
 		{DFE5CA99-113B-4100-9080-1D5561AA703C}.Release|x86.ActiveCfg = Release|Win32
 		{DFE5CA99-113B-4100-9080-1D5561AA703C}.Release|x86.Build.0 = Release|Win32
+		{5C53E7CA-FADE-4215-9608-3C7498BEDBE1}.Debug|x64.ActiveCfg = Debug|x64
+		{5C53E7CA-FADE-4215-9608-3C7498BEDBE1}.Debug|x64.Build.0 = Debug|x64
+		{5C53E7CA-FADE-4215-9608-3C7498BEDBE1}.Debug|x86.ActiveCfg = Debug|Win32
+		{5C53E7CA-FADE-4215-9608-3C7498BEDBE1}.Debug|x86.Build.0 = Debug|Win32
+		{5C53E7CA-FADE-4215-9608-3C7498BEDBE1}.Release|x64.ActiveCfg = Release|x64
+		{5C53E7CA-FADE-4215-9608-3C7498BEDBE1}.Release|x64.Build.0 = Release|x64
+		{5C53E7CA-FADE-4215-9608-3C7498BEDBE1}.Release|x86.ActiveCfg = Release|Win32
+		{5C53E7CA-FADE-4215-9608-3C7498BEDBE1}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
