@@ -90,7 +90,7 @@ int main()
 		}
 
 		printf("\n\n\nAre you ready to play the game? >>>   ");
-		scanf("%c", &choice);
+		scanf_s("%c", &choice);
 		fseek(stdin, 0, SEEK_END);
 		if (toupper(choice) == 'N')
 		{
@@ -111,7 +111,7 @@ int main()
 		{
 			printf("This is the first room\n");
 			printf("Would you like to go to the second room?   (Y/N)  >>>   ");
-			scanf("%c", &choice);
+			scanf_s("%c", &choice);
 			fseek(stdin, 0, SEEK_END);
 			choice = toupper(choice);
 			if (choice == 'Y')
@@ -126,7 +126,7 @@ int main()
 			{
 				printf("You found a Text book.\n");
 				printf("Would you like to trade your %s for a Text book?   (Y/N)  >>>  ", equipmentName.c_str());
-				scanf("%c", &choice);
+				scanf_s("%c", &choice);
 				fseek(stdin, 0, SEEK_END);
 				choice = toupper(choice);
 				if (choice == 'Y')
@@ -138,7 +138,7 @@ int main()
 					if (1 <= timesThrough)
 					{ 
 						printf("Are you sure you do not want the Text book?  (Y/N)  >>>  ");
-						scanf("%c", &choice);
+						scanf_s("%c", &choice);
 						fseek(stdin, 0, SEEK_END);
 						choice = toupper(choice);
 						if (choice == 'N')
@@ -152,7 +152,7 @@ int main()
 			}
 
 			printf("\nWould you like to go to the third room?  (Y/N)  >>>  ");
-			scanf("%c", &choice);
+			scanf_s("%c", &choice);
 			fseek(stdin, 0, SEEK_END);
 			choice = toupper(choice);
 			if (choice == 'Y')
